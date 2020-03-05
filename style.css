@@ -1,1 +1,25 @@
+h1{
+	color: #FF3900;
+	font-family: 'GlacialIndifference-Regular',sans serif;
+}
+p{
+	font-family:'Didact Gothic',sans serif;
+}
+header{
+	display:flex;
+	justify-content: left;
+	color: #9D9D9D;
+	text-align: left;
+}
+span{
+	margin:1%;
 
+}
+
+.upper{
+	text-transform: uppercase;
+}
+
+@media screen and (min-width: 600px){
+	
+}
