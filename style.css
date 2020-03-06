@@ -1,3 +1,7 @@
+*{
+	box-sizing: border-box;
+	border: 1px solid red;
+}
 h1{
 		color: #FF3900;
 		font-family: 'GlacialIndifference-Regular',sans serif;
@@ -11,6 +15,9 @@ header{
 }
 .header-lead{
 	font-weight: bold;
+}
+.header-lead2{
+	color: #FF3900;
 }
 .upper{
 	text-transform: uppercase;
@@ -90,24 +97,48 @@ button{
 	.hidden{
 		display: block;
 	}
-	.logo{
-		grid-row: 1 /span 2;
-		grid-column: 4 span/5;
+	.read-more{
+		grid-row: 10 /span 11;
+		grid-column: 1/span 6;
 	}
 	main{
 		display: grid;
-		grid-template-columns: 2fr 2fr 1fr 1fr;
-		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	}
+	.background {
+		background-color: #EFEFEF;
+		display: grid;
+		grid-row: 1 / 4;
+		grid-column: 7/ span 8;
+		width: 100%;
+	}
+	.image-box{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		grid-row: 4 /span 7;
+		grid-column: 1/span 2;
+		width: 100%;
+	}
+	.box-column{
+		flex-direction: column;
+		width:100%;
+	}
+	.box-img{
+		width: 100%;
+	}
+	.logo{
+		width: 100%;
+	}
 	}
 	main .first-content{
 		display:flex;
-		flex-direction: column;
-		grid-row: 1 /span 3;
-		grid-column: 1 /span 2;
-	}
-	.image-box{
-		grid-row: 2 /span 3;
-		grid-column: 1/span2;
+		flex-direction: row;
+		flex-wrap: wrap;
+		grid-row: 1 / span 2;
+		grid-column: 1 /span 4;
+		width: 100%;
 	}
 	.outro-box{
 		grid-row: 4;
@@ -122,24 +153,41 @@ button{
 		justify-content: left;
 		text-align: left;
 	}
-	span{
-		margin:1%;
-	
-	}
 
-	.image-box{
-		display: grid;
-		margin-left: 10%;
-		margin-right: 30%;
-		grid-template-rows: 1fr 1fr 1fr;
-		grid-template-columns: 1fr;
+	.box-img1{
+		grid-column: 1;
+		grid-row: 1;
+		width: 100%;
+		margin-right: 5px;
 	}
-	.box-row{
-		display:flex;
-		flex-direction: row;
-		justify-content: left;
+	.box-img2{
+		grid-column: 2;
+		grid-row: 1;
+		width: 100%;
+		margin-right: 5px;
 	}
-	.box-img{
+	.box-img3{
+		grid-column: 1;
+		grid-row: 2;
+		width: 100%;
+		margin-right: 5px;
+	}
+	.box-img4{
+		grid-column: 2;
+		grid-row: 2;
+		width: 100%;
+		margin-right: 5px;
+	}
+	.box-img5{
+		grid-column: 1;
+		grid-row: 3;
+		width: 100%;
+		margin-right: 5px;
+	}
+	.box-img6{	
+		grid-column: 2;
+		grid-row: 3;
+		width: 100%;
 		margin-right: 5px;
 	}
 }
