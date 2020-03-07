@@ -2,56 +2,59 @@
 	box-sizing: border-box;
 	border: 1px solid red;
 }
-
+.emphasis{
+	font-weight: bold;
+	color: #FF3900;
+	margin-left:5%;
+}
+header .emphasis{
+	margin-left:0%;
+	color: black;
+}
+h1{
+	color: #FF3900;
+	font-size: 30px;
+	font-family: "GlacialIndifference-Regular", sans-serif;
+}
+h2{
+	font-family: "Didact Gothic", sans-serif;
+	font-size: 18px;
+	font-weight: bolder;
+}
+p{
+	font-size: 16px;
+	font-family: "Didact Gothic", sans-serif;
+}
 main{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .first-grid{
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
-	background-color: black;
-	color: white;
+	margin-left: 5%;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr .5fr .5fr 1fr 1fr;
+	background-color: white;
+	color: black;
 }
 .second-grid{
 	background-color: red;
 }
+
 .third-grid{
 	grid-template-rows: .5fr .5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 	background-color: white;
 }
-.logo{
-	grid-row: 1;
-	grid-column: 9;
-	background-image: url("./img/my500-logo.png");
-	background-size: cover;
-	width: 100%;
-}
-.x-mark{
-	background-image: url("./img/icn-navigation.png");
-	background-size: cover;
-	margin: auto ;
-	width: 100%;
-}
-.first-grid .background{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
 
-	grid-row: 1/ span 10;
-	grid-column: 9;
+.first-grid .background{
+	grid-row: 1 / span 10;
+	grid-column: 10/ span 12;
 	background-color: #efefef;
 }
 .first-grid .content{
 	grid-row: 1 / span 10;
-	grid-column: 1 / span 6;
+	grid-column: 1 / span 7;
 }
-.second-grid .background{
-	grid-row: 1/ span 10;
-	grid-column: 10;
-	background-color: white;
-}
+
 .third-grid .background{
 	grid-row: 2/ span 11;
 	grid-column: 1/ span 10;
@@ -62,9 +65,34 @@ main{
 	grid-column: 1;
 }
 
-@media screen and (min-width: 516px) {
-
+@media screen and (min-width: 375px) {
+	h1{
+		font-size: 35px;
+	}
 }
-@media screen and (min-width: 600px){
-	
+@media screen and (min-width: 516px){
+	h1{
+		font-size: 40px;
+	}
+	.logo{
+		grid-row: 1/span 6;
+		grid-column: 9/span 12;
+		background-image: url("./img/my500-logo.png");
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		width: 100%;
+		height:100%;
+	}
+	.x-mark{
+		grid-row: 9;
+		grid-column: 11 / span 12;
+		background-image: url("./img/icn-navigation.png");
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		width: 50%;
+		margin: 25%;
+		height:100%;
+	}
 }
