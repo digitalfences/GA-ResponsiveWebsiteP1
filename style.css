@@ -2,14 +2,23 @@
 	box-sizing: border-box;
 	/*border: 1px solid red;*/
 }
+body{
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr;
+}
+
 .emphasis{
-	font-weight: bold;
 	color: #FF3900;
-	margin-left:5%;
+	font-weight: bold;
 }
 header .emphasis{
+	
 	margin-left:0%;
-	color: black;
+	color: #9D9D9D;
+}
+header{
+	color: #9D9D9D;
 }
 h1{
 	color: #FF3900;
@@ -21,6 +30,10 @@ h2{
 	font-size: 18px;
 	font-weight: bolder;
 }
+h3{
+	font-family: "Didact Gothic",sans-serif;
+	font-size: 14px;
+}
 p{
 	font-size: 16px;
 	font-family: "Didact Gothic", sans-serif;
@@ -31,21 +44,36 @@ main{
 	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .first-grid{
-	margin-left: 5%;
+	grid-row: 1;
+	
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr .5fr .5fr 1fr 1fr;
 	background-color: white;
 	color: black;
 }
 .second-grid{
+	grid-row: 2;
 	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 	background-color: white;
 }
-.second-grid h1{
+.second-grid .content{
 	text-align: right;
 	grid-row: 4;
-	grid-column: 2 /span 6;
+	grid-column: 3 / 8;
+}
+.author-box{
+	grid-row:5;
+	border: 1px solid black;
+	grid-column: 1 /span 5;
+}
+.share-box{
+	grid-row: 5;
+	grid-column: 8/span 9;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .third-grid{
+	grid-row: 3;
 	grid-template-rows: .5fr .5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 	background-color: white;
 }
@@ -69,32 +97,32 @@ main{
 
 .im1{
 	grid-row:1;
-	grid-column:1 /span 5;
+	grid-column:3 / 5;
 	background-image: url("./img/img tile.png");
 }
 .im2{
 	grid-row: 1;
-	grid-column: 6 /span 10;
+	grid-column: 6 / 8;
 	background-image: url("./img/img tile-1.png");
 }
 .im3{
 	grid-row:2;
-	grid-column:1 /span 5;
+	grid-column:3 / 5;
 	background-image: url("./img/img tile-2.png");
 }
 .im4{
 	grid-row:2;
-	grid-column:6 /span 10;
+	grid-column:6 / 8;
 	background-image: url("./img/img tile-3.png");
 }
 .im5{
 	grid-row: 3;
-	grid-column: 1 /span 5;
+	grid-column: 3 / 5;
 	background-image: url("./img/img tile-4.png");
 }
 .im6{
 	grid-row:3;
-	grid-column:6 /span 10;
+	grid-column:6 / 8;
 	background-image: url("./img/img tile-5.png");
 }
 
@@ -105,8 +133,10 @@ main{
 	background-color: #efefef;
 }
 .read-more{
+	height: 100%;
+	width: 100%;
 	grid-row: 1/ span 2;
-	grid-column: 1;
+	grid-column: 2/span 3;
 }
 
 @media screen and (min-width: 375px) {
