@@ -129,8 +129,6 @@ main{
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
-	width: 100%;
-	height:100%;
 }
 
 .im1{
@@ -227,13 +225,19 @@ main{
 	grid-column:1 / span 10;
 }
 
-.first-article .imgbox{
+.articles-mobile .first-article .imgbox{
 	width: 100%;
 	height: 50vh;
+	border-right: 5px solid black;
+	border-bottom: 5px solid black;
+	padding-bottom: 5%;
+	margin-bottom: 5%;
 	background-size: contain;
 	background-image: url("./img/Screen\ Shot\ 2018-07-08\ at\ 13.09.10.png");
 }
-.second-article .imgbox{
+ .articles-mobile .second-article .imgbox{
+	border-right: 5px solid black;
+	border-bottom: 5px solid black;
 	width: 100%;
 	height: 50vh;
 	background-size: contain;
@@ -317,27 +321,47 @@ main{
 		display:none;
 	}
 	.read-more-title{
-		grid-column: 1/ 5;
+		grid-column: 1 /2;
+	}
+	.third-grid .content{
+		text-align: left;
+		display: flex;
+		flex-direction: column;
+		justify-self: center;
+		align-items: left;
 	}
 	.first-article{
 		width: 100%;
 		height: 100%;
-		display: flex;
-		flex-direction: row;
-		justify-content: left;
-		align-items: center;
-		grid-row:4;
-		grid-column:1 / span 10;
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-columns: 1fr 1fr;
+		grid-row: 4 / 5;
+		grid-column:1 / 3;
 	}
 	.second-article{
 		width: 100%;
 		height: 100%;
-		flex-direction: row;
-		justify-content: left;
-		align-items: center;
-		display:flex;
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-columns: 1fr 1fr;
 		grid-row:5;
-		grid-column:1 / span 10;
+		grid-column:1 / 3;
+	}
+	img{
+		width: 100%;
+		height: 100%;
+		padding-right: 10%;
+		margin-right: 10%;
+		border-right: 5px solid black;
+	}
+	.first-article .content{
+		margin-left: 10%;
+		grid-column: 2;
+	}
+	.second-article .content{
+		margin-left: 10%;
+		grid-column: 2;
 	}
 	.img-container{
 		display:grid;
@@ -375,6 +399,7 @@ main{
 	}
 	.third-grid{
 		grid-row: 5;
+		grid-template-columns: 33% 33% 34%;
 		grid-template-rows: 5% 4% 4% 1fr 1fr;
 		background-color: white;
 	}
